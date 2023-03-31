@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Asesmen 1</string>
+    <string name="app_name">Random Number Picker</string>
     <string name="max">Angka Maksimal</string>
     <string name="kalimat">Masukan angka maksimal untuk dicari angka acaknya. Hasil angka random akan berkisar antara satu hingga angka maksimal</string>
     <string name="generate">Generate</string>
