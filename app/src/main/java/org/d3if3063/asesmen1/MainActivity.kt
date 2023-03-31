@@ -1,11 +1,12 @@
 package org.d3if3063.asesmen1
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import org.d3if3063.asesmen1.databinding.ActivityMainBinding
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             val maxNumber = maxNumberString.toInt()
             val random = Random()
             val number = random.nextInt(maxNumber) + 1
-            binding.numberTextView.text = number.toString()
+            binding.numberTextView.text = "Random Number:\n" + number.toString()
         }
         else {
             Toast.makeText(this, "Please enter a valid number.", Toast.LENGTH_SHORT).show()
