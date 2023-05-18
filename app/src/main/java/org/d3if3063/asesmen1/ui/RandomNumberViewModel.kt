@@ -1,4 +1,4 @@
-package org.d3if3063.asesmen1.viewmodel
+package org.d3if3063.asesmen1.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
