@@ -4,4 +4,8 @@
     <string name="kalimat">Masukan angka maksimal untuk dicari angka acaknya. Hasil angka random akan berkisar antara satu hingga angka maksimal</string>
     <string name="generate">Generate</string>
     <string name="hasil_x">Random Number: %1$.f</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="tombol_masuk">Mulai Random Picker</string>
+    <string name="welcome">Welcome</string>
+    <string name="pengaturan_decs">Di menu ini Anda dapat mengatur aplikasi sesuai dengan preferensi Anda.</string>
 </resources>

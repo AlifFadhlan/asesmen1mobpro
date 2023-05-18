@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/awalFragment">
+
+    <fragment
+        android:id="@+id/randomPickerFragment"
+        android:name="org.d3if3063.asesmen1.ui.RandomPickerFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_random_picker" />
+    <fragment
+        android:id="@+id/awalFragment"
+        android:name="org.d3if3063.asesmen1.ui.AwalFragment"
+        android:label="@string/welcome"
+        tools:layout="@layout/fragment_awal">
+        <action
+            android:id="@+id/action_awalFragment_to_randomPickerFragment"
+            app:destination="@id/randomPickerFragment" />
+    </fragment>
+</navigation>
