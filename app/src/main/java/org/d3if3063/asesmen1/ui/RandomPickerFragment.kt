@@ -1,5 +1,6 @@
 package org.d3if3063.asesmen1.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -47,11 +48,28 @@ class RandomPickerFragment : Fragment() {
         inflater.inflate(R.menu.options_menu, menu)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_about) {
-            findNavController().navigate(
-                R.id.action_randomPickerFragment_to_aboutFragment)
-            return true
+        when(item.itemId) {
+            R.id.menu_bagikan -> {
+                shareData()
+            }
+
+            R.id.menu_about -> {
+                findNavController().navigate(
+                    R.id.action_randomPickerFragment_to_aboutFragment
+                )
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun shareData() {
+        val message = getString(R.string.bagikan_template)
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
     }
 }

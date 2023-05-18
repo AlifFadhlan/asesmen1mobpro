@@ -11,4 +11,6 @@
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="copyright">Random Number Picker merupakan sebuah aplikasi Android untuk mencari angka secara acak dengan meng-input angka maksimal.\n\nAplikasi ini dibuat untuk kelas
 Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCopyright © 2023 Alif Fadhlan Fadhilah.\nAll rights reserved.</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Ikuti saya di Github: https://github.com/AlifFadhlan/asesmen1mobpro</string>
 </resources>

@@ -5,4 +5,8 @@
         android:id="@+id/menu_about"
         android:title="@string/tentang_aplikasi"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_bagikan"
+        android:title="@string/bagikan"
+        app:showAsAction="never" />
 </menu>
