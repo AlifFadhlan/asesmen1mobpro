@@ -1,13 +1,13 @@
 package org.d3if3063.asesmen1.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import org.d3if3063.asesmen1.R
 import org.d3if3063.asesmen1.databinding.FragmentRandomPickerBinding
 
 
@@ -20,6 +20,7 @@ class RandomPickerFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         binding = FragmentRandomPickerBinding.inflate(layoutInflater, container,false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -39,5 +40,18 @@ class RandomPickerFragment : Fragment() {
             val displayText = "Max Number: ${randomNumber.maxNumber}\nNumber: ${randomNumber.number}"
             binding.numberTextView.text = displayText
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_about) {
+            findNavController().navigate(
+                R.id.action_randomPickerFragment_to_aboutFragment)
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

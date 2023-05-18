@@ -9,7 +9,11 @@
         android:id="@+id/randomPickerFragment"
         android:name="org.d3if3063.asesmen1.ui.RandomPickerFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_random_picker" />
+        tools:layout="@layout/fragment_random_picker" >
+        <action
+            android:id="@+id/action_randomPickerFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/awalFragment"
         android:name="org.d3if3063.asesmen1.ui.AwalFragment"
@@ -19,4 +23,9 @@
             android:id="@+id/action_awalFragment_to_randomPickerFragment"
             app:destination="@id/randomPickerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if3063.asesmen1.ui.AboutFragment"
+        android:label="@string/tentang_aplikasi"
+        tools:layout="@layout/fragment_about"/>
 </navigation>
