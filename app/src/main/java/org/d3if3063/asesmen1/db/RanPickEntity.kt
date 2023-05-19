@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 data class RanPickEntity (
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L,
+    var tanggal: Long = System.currentTimeMillis(),
     var maxNumber: Int,
     var number: Int
 )

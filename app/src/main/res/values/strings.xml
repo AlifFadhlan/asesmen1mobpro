@@ -15,4 +15,7 @@ Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCo
     <string name="bagikan_template">Ikuti saya di Github: https://github.com/AlifFadhlan/asesmen1mobpro</string>
     <string name="belum_ada_data">Belum ada data</string>
     <string name="histori">Histori</string>
+    <string name="hasil_max">Max Number: %1$d</string>
+    <string name="hasil_num">Random Number: %1$d</string>
+
 </resources>

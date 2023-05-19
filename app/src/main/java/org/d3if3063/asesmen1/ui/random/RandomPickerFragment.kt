@@ -34,7 +34,7 @@ class RandomPickerFragment : Fragment() {
             val maxNumberString = binding.maxNumberEditText.text.toString()
             if (maxNumberString.isNotEmpty()) {
                 val maxNumber = maxNumberString.toInt()
-                viewModel.generateRandomNumber(maxNumber)
+                viewModel.doGenerate(maxNumber)
             }
             else {
                 Toast.makeText(context, "Please enter a valid number.", Toast.LENGTH_SHORT).show()
