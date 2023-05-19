@@ -17,5 +17,8 @@ Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCo
     <string name="histori">Histori</string>
     <string name="hasil_max">Max Number: %1$d</string>
     <string name="hasil_num">Random Number: %1$d</string>
-
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
 </resources>

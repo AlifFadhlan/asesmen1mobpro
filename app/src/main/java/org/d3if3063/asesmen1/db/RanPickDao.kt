@@ -13,4 +13,7 @@ interface RanPickDao {
 
     @Query("SELECT * FROM ranpick ORDER BY id DESC")
     fun getLastPick(): LiveData<List<RanPickEntity>>
+
+    @Query("DELETE FROM ranpick")
+    fun clearData()
 }
