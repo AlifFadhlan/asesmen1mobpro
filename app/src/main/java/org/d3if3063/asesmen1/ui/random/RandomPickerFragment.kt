@@ -1,7 +1,8 @@
-package org.d3if3063.asesmen1.ui
+package org.d3if3063.asesmen1.ui.random
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -10,13 +11,16 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import org.d3if3063.asesmen1.R
 import org.d3if3063.asesmen1.databinding.FragmentRandomPickerBinding
+import org.d3if3063.asesmen1.db.RanPickDb
 
 
 class RandomPickerFragment : Fragment() {
     private lateinit var binding: FragmentRandomPickerBinding
 
     private val viewModel: RandomNumberViewModel by lazy {
-        ViewModelProvider(requireActivity())[RandomNumberViewModel::class.java]
+        val db = RanPickDb.getInstance(requireContext())
+        val factory = RandomViewModelFactory(db.dao)
+        ViewModelProvider(this,factory)[RandomNumberViewModel::class.java]
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -40,6 +44,11 @@ class RandomPickerFragment : Fragment() {
         viewModel.randomNumber.observe(requireActivity(), Observer {randomNumber ->
             val displayText = "Max Number: ${randomNumber.maxNumber}\nNumber: ${randomNumber.number}"
             binding.numberTextView.text = displayText
+        })
+
+        viewModel.data.observe(viewLifecycleOwner, {
+            if (it == null) return@observe
+            Log.d("RandomPickerFragment", "Data tersimpan. ID = ${it.id}")
         })
     }
 
