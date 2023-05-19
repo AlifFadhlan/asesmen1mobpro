@@ -9,4 +9,9 @@
         android:id="@+id/menu_bagikan"
         android:title="@string/bagikan"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_histori"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="@string/histori"
+        app:showAsAction="ifRoom" />
 </menu>

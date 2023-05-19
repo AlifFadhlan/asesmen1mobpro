@@ -13,7 +13,6 @@ import java.util.*
 
 class RandomNumberViewModel(private val db: RanPickDao) : ViewModel() {
     val randomNumber = MutableLiveData<RandomNumber>()
-    val data = db.getLastPick()
     fun generateRandomNumber(maxNumber: Int) {
         val random = Random()
         val number = random.nextInt(maxNumber) + 1

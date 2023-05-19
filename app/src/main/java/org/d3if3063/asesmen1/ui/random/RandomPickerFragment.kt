@@ -45,11 +45,6 @@ class RandomPickerFragment : Fragment() {
             val displayText = "Max Number: ${randomNumber.maxNumber}\nNumber: ${randomNumber.number}"
             binding.numberTextView.text = displayText
         })
-
-        viewModel.data.observe(viewLifecycleOwner, {
-            if (it == null) return@observe
-            Log.d("RandomPickerFragment", "Data tersimpan. ID = ${it.id}")
-        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -68,6 +63,13 @@ class RandomPickerFragment : Fragment() {
                 )
                 return true
             }
+            R.id.menu_histori -> {
+                findNavController().navigate(
+                    R.id.action_randomPickerFragment_to_historiFragment
+                )
+                return true
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }

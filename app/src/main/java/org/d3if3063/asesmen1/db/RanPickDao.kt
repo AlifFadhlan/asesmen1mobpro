@@ -11,6 +11,6 @@ interface RanPickDao {
     @Insert
     fun insert(ranpick: RanPickEntity)
 
-    @Query("SELECT * FROM ranpick ORDER BY id DESC LIMIT 1")
-    fun getLastPick(): LiveData<RanPickEntity?>
+    @Query("SELECT * FROM ranpick ORDER BY id DESC")
+    fun getLastPick(): LiveData<List<RanPickEntity>>
 }

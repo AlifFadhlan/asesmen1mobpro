@@ -13,4 +13,6 @@
 Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCopyright © 2023 Alif Fadhlan Fadhilah.\nAll rights reserved.</string>
     <string name="bagikan">Bagikan</string>
     <string name="bagikan_template">Ikuti saya di Github: https://github.com/AlifFadhlan/asesmen1mobpro</string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
 </resources>
