@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_awalFragment_to_randomPickerFragment"
             app:destination="@id/randomPickerFragment" />
+        <action
+            android:id="@+id/action_awalFragment_to_mainAngkaFragment"
+            app:destination="@id/mainAngkaFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -36,4 +39,9 @@
         android:name="org.d3if3063.asesmen1.ui.histori.HistoriFragment"
         android:label="@string/histori"
         tools:layout="@layout/fragment_histori"/>
+    <fragment
+        android:id="@+id/mainAngkaFragment"
+        android:name="org.d3if3063.asesmen1.ui.faktaAngka.MainAngkaFragment"
+        android:label="@string/faktaAngka"
+        tools:layout="@layout/fragment_main"/>
 </navigation>

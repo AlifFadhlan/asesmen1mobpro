@@ -21,4 +21,6 @@ Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCo
     <string name="konfirmasi_hapus">Hapus semua histori?</string>
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
+    <string name="message">%1$s diklik!</string>
+    <string name="faktaAngka">Fakta Angka</string>
 </resources>

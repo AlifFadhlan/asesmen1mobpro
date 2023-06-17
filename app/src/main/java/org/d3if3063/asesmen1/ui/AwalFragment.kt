@@ -23,5 +23,10 @@ class AwalFragment : Fragment() {
                 R.id.action_awalFragment_to_randomPickerFragment
             )
         }
+        binding.buttonFakta.setOnClickListener {
+            it.findNavController().navigate(
+                R.id.action_awalFragment_to_mainAngkaFragment
+            )
+        }
     }
 }
