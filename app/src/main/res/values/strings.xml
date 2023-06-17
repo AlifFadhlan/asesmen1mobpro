@@ -26,5 +26,6 @@ Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCo
     <string name="koneksi_error">Koneksi error</string>
     <string name="channel_name">Updater</string>
     <string name="channel_desc">Update data hewan otomatis</string>
-
+    <string name="notif_title">Angka punya fakta unik!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran..</string>
 </resources>
