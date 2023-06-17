@@ -1,0 +1,12 @@
+[
+    {"nama": "Satu", "deskripsi": "Lebar rel kereta api normal adalah 1 meter.", "imageId": "angka1"},
+    {"nama": "Dua", "deskripsi": "Alat transportasi, seperti sepeda, sepeda motor, delman, gerobak, dan pedati berjumlahkan dua buah roda.", "imageId": "angka2"},
+    {"nama": "Tiga", "deskripsi": "Warna pada lampu lalu lintas.", "imageId": "angka3"},
+    {"nama": "Empat", "deskripsi": "Arah mata angin utama (utara, selatan, barat, dan timur).", "imageId": "angka4"},
+    {"nama": "Lima", "deskripsi": "Alat indra pada tubuh manusia.", "imageId": "angka5"},
+    {"nama": "Enam", "deskripsi": "Jumlah senar pada gitar.", "imageId": "angka6"},
+    {"nama": "Tujuh", "deskripsi": "Jumlah huruf yang dipergunakan dalam angka Romawi (yaitu: C, D, I, L, M, V, dan X).", "imageId": "angka7"},
+    {"nama": "Delapan", "deskripsi": "Basis bilangan oktal.", "imageId": "angka8"},
+    {"nama": "Sembilan", "deskripsi": "Nomor atom Fluorin.", "imageId": "angka9"},
+    {"nama": "Nol", "namaLatin": "Berperan penting dalam matematika sebagai identitas tambahan bagi bilangan bulat, bilangan real, dan struktur aljabar lainnya.", "imageId": "angka0"}
+]
