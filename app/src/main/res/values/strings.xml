@@ -23,4 +23,5 @@ Mobpro 1. Temukan kodenya di https://github.com/AlifFadhlan/asesmen1mobpro\n\nCo
     <string name="batal">Batal</string>
     <string name="message">%1$s diklik!</string>
     <string name="faktaAngka">Fakta Angka</string>
+    <string name="koneksi_error">Koneksi error</string>
 </resources>

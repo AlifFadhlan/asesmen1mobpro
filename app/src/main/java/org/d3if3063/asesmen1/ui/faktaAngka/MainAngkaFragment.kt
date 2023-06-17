@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.d3if3063.asesmen1.model.FunFact
 import org.d3if3063.asesmen1.R
 import org.d3if3063.asesmen1.databinding.FragmentMainBinding
+import org.d3if3063.asesmen1.network.ApiStatus
 
 class MainAngkaFragment : Fragment() {
     private val viewModel: MainAngkaViewModel by lazy {
@@ -43,5 +44,24 @@ class MainAngkaFragment : Fragment() {
         viewModel.getData().observe(viewLifecycleOwner) {
             myAdapter.updateData(it)
         }
+        viewModel.getStatus().observe(viewLifecycleOwner) {
+            updateProgress(it)
+        }
     }
+
+    private fun updateProgress(status: ApiStatus) {
+        when (status) {
+            ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            ApiStatus.FAILED -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
+        }
+    }
+
 }
