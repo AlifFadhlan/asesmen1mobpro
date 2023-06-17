@@ -8,5 +8,5 @@
     {"nama": "Tujuh", "deskripsi": "Jumlah huruf yang dipergunakan dalam angka Romawi (yaitu: C, D, I, L, M, V, dan X).", "imageId": "angka7"},
     {"nama": "Delapan", "deskripsi": "Basis bilangan oktal.", "imageId": "angka8"},
     {"nama": "Sembilan", "deskripsi": "Nomor atom Fluorin.", "imageId": "angka9"},
-    {"nama": "Nol", "namaLatin": "Berperan penting dalam matematika sebagai identitas tambahan bagi bilangan bulat, bilangan real, dan struktur aljabar lainnya.", "imageId": "angka0"}
+    {"nama": "Nol", "deskripsi": "Berperan penting dalam matematika sebagai identitas tambahan bagi bilangan bulat, bilangan real, dan struktur aljabar lainnya.", "imageId": "angka0"}
 ]
