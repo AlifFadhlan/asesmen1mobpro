@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.d3if3063.asesmen1.R
 import org.d3if3063.asesmen1.databinding.ListAngkaBinding
 import org.d3if3063.asesmen1.model.FunFact
+import org.d3if3063.asesmen1.network.FactApi
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     private val data = mutableListOf<FunFact>()
@@ -20,7 +22,11 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         fun bind(funFact: FunFact) = with(binding) {
             namaTextView.text = funFact.nama
             deskripsiTextView.text = funFact.deskripsi
-            imageView.setImageResource(funFact.imageResId)
+            Glide.with(imageView.context)
+                .load(FactApi.getFactUrl(funFact.imageId))
+                .error(R.drawable.ic_baseline_broken_image_24)
+                .into(imageView)
+
 
             root.setOnClickListener {
                 val message = root.context.getString(R.string.message, funFact.nama)
