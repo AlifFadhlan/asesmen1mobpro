@@ -1,15 +1,21 @@
 package org.d3if3063.asesmen1.ui.faktaAngka
 
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.d3if3063.asesmen1.model.FunFact
 import org.d3if3063.asesmen1.network.ApiStatus
 import org.d3if3063.asesmen1.network.FactApi
+import org.d3if3063.asesmen1.network.UpdateWorker
+import java.util.concurrent.TimeUnit
 
 class MainAngkaViewModel : ViewModel() {
     private val data = MutableLiveData<List<FunFact>>()
@@ -33,4 +39,16 @@ class MainAngkaViewModel : ViewModel() {
 
     fun getData(): LiveData<List<FunFact>> = data
     fun getStatus(): LiveData<ApiStatus> = status
+
+    fun scheduleUpdater(app: Application) {
+        val request = OneTimeWorkRequestBuilder<UpdateWorker>()
+            .setInitialDelay(1, TimeUnit.MINUTES)
+            .build()
+        WorkManager.getInstance(app).enqueueUniqueWork(
+            UpdateWorker.WORK_NAME,
+            ExistingWorkPolicy.REPLACE,
+            request
+        )
+    }
+
 }
