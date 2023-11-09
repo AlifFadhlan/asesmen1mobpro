@@ -1,5 +1,5 @@
 [
-    {"nama": "Satu", "deskripsi": "Lebar rel kereta api normal adalah 1 meter.", "imageId": "angka1"},
+    {"nama": "One", "deskripsi": "Lebar rel kereta api normal adalah One meter.", "imageId": "angka1"},
     {"nama": "Dua", "deskripsi": "Alat transportasi, seperti sepeda, sepeda motor, delman, gerobak, dan pedati berjumlahkan dua buah roda.", "imageId": "angka2"},
     {"nama": "Tiga", "deskripsi": "Warna pada lampu lalu lintas.", "imageId": "angka3"},
     {"nama": "Empat", "deskripsi": "Arah mata angin utama (utara, selatan, barat, dan timur).", "imageId": "angka4"},
